@@ -2,16 +2,16 @@ name: Build and Push Docker Image to Docker Hub
 
 on:
   push:
-    branches: [ "develop" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "develop"]
+    branches: [ "main"]
 
 env:
   # Use docker.io for Docker Hub if empty
   REGISTRY: docker.io
   # github.repository as <account>/<repo>
   IMAGE_NAME: ${{ github.repository }}
-  TAG_NAME: latest
+  TAG_NAME: "1.0.0"
 
 jobs:
 
