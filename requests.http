@@ -1,0 +1,38 @@
+GET http://localhost:9999/clientes/1/extrato
+
+
+###
+GET http://localhost:9999/clientes/1/extrato
+
+
+###
+POST http://localhost:9999/clientes/1/transacoes
+Content-Type: application/json
+
+{
+  "valor": 1,
+  "tipo": "c",
+  "descricao" : "descrição"
+}
+
+
+###
+POST http://localhost:9999/clientes/1/transacoes
+Content-Type: application/json
+
+{
+  "valor": 100000,
+  "tipo": "c",
+  "descricao" : "descrição"
+}
+
+###
+
+POST http://localhost:9999/clientes/1/transacoes
+Content-Type: application/json
+
+{
+  "valor": 1000,
+  "tipo": "c",
+  "descricao" : "pix"
+}
