@@ -2,9 +2,9 @@ name: Build and Push Docker Image to Docker Hub
 
 on:
   push:
-    branches: [ "dev", "main" ]
+    branches: [ "develop" ]
   pull_request:
-    branches: [ "dev", "main" ]
+    branches: [ "develop"]
 
 env:
   # Use docker.io for Docker Hub if empty
@@ -19,7 +19,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker image build --no-cache -t ${{ env.IMAGE_NAME }} .
+      run: docker image build --no-cache -t ${{ env.IMAGE_NAME }}:latest .
 
   push_to_registry:
     name: Push Docker image to Docker Hub
